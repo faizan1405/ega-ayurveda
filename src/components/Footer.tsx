@@ -1,34 +1,32 @@
 import React from 'react';
 import { ArrowUp, Mail } from 'lucide-react';
 
-
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
-  onOpenExpert: () => void;
+  onOpenExpert?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenExpert }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="relative bg-forest-950 text-ivory-50 pt-20 pb-12 overflow-hidden border-t border-forest-800">
+    <footer className="relative bg-stone-950 text-ivory-50 pt-20 pb-12 overflow-hidden border-t border-stone-850">
       
-      {/* Subtle Oversized Botanical Line-Art SVG in Background */}
-      <div className="absolute right-0 bottom-0 w-[550px] h-[550px] opacity-[0.04] pointer-events-none translate-x-1/4 translate-y-1/4">
+      {/* Subtle Oversized Botanical Sacred Geometry in Background */}
+      <div className="absolute right-0 bottom-0 w-[550px] h-[550px] opacity-[0.035] pointer-events-none translate-x-1/4 translate-y-1/4">
         <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full text-gold-300">
           <path d="M100 10 C 120 40, 160 80, 190 100 C 160 120, 120 160, 100 190 C 80 160, 40 120, 10 100 C 40 80, 80 40, 100 10 Z" strokeWidth="0.75" />
           <circle cx="100" cy="100" r="70" strokeWidth="0.5" strokeDasharray="3 3" />
           <circle cx="100" cy="100" r="45" strokeWidth="0.5" />
-          <path d="M100 30 L 100 170 M 30 100 L 170 100" strokeWidth="0.5" />
         </svg>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         
         {/* Main Footer Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-forest-850">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-stone-800">
           
           {/* Brand Presentation Column */}
           <div className="lg:col-span-2">
@@ -42,8 +40,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenExpert }) => {
               </span>
             </div>
 
-            <p className="max-w-sm text-xs sm:text-sm text-ivory-200/70 font-light leading-relaxed mb-6">
-              Ancient Ayurvedic Wisdom. Refined for Modern Wellness. Handcrafted formulations, authentic Rasashastra preparations, and wild-harvested botanicals.
+            <p className="max-w-sm text-xs sm:text-sm text-stone-400 font-light leading-relaxed mb-6">
+              Pure Ayurveda, Refined for Modern Wellness. Handcrafted formulations, standardized active botanicals, and certified gold-grade Himalayan Shilajit.
             </p>
 
             {/* Social Channels */}
@@ -52,7 +50,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenExpert }) => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-forest-900 border border-forest-800 hover:border-gold-500/50 flex items-center justify-center text-ivory-100 hover:text-gold-300 transition-colors"
+                className="w-9 h-9 rounded-full bg-stone-900 border border-stone-800 hover:border-gold-500/50 flex items-center justify-center text-stone-300 hover:text-gold-300 transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -63,7 +61,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenExpert }) => {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-forest-900 border border-forest-800 hover:border-gold-500/50 flex items-center justify-center text-ivory-100 hover:text-gold-300 transition-colors"
+                className="w-9 h-9 rounded-full bg-stone-900 border border-stone-800 hover:border-gold-500/50 flex items-center justify-center text-stone-300 hover:text-gold-300 transition-colors"
                 aria-label="YouTube"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -72,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenExpert }) => {
               </a>
               <a
                 href="mailto:care@egaayurveda.com"
-                className="w-9 h-9 rounded-full bg-forest-900 border border-forest-800 hover:border-gold-500/50 flex items-center justify-center text-ivory-100 hover:text-gold-300 transition-colors"
+                className="w-9 h-9 rounded-full bg-stone-900 border border-stone-800 hover:border-gold-500/50 flex items-center justify-center text-stone-300 hover:text-gold-300 transition-colors"
                 aria-label="Email"
               >
                 <Mail className="w-4 h-4" />
@@ -80,98 +78,98 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenExpert }) => {
             </div>
           </div>
 
-          {/* Quick Nav: Shop & Formulations */}
+          {/* Quick Links */}
           <div>
             <h4 className="text-xs font-serif uppercase tracking-[0.2em] text-gold-400 font-semibold mb-4">
-              Formulations
+              Quick Links
             </h4>
-            <ul className="space-y-2.5 text-xs text-ivory-200/70 font-light">
+            <ul className="space-y-2.5 text-xs text-stone-400 font-light">
               <li>
-                <button onClick={() => onNavigate('featured-products')} className="hover:text-gold-300 transition-colors">
-                  Swarna Chyawanprash
+                <button onClick={() => onNavigate('hero')} className="hover:text-gold-300 transition-colors">
+                  Home
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('featured-products')} className="hover:text-gold-300 transition-colors">
-                  Nervega Gold & Silver
+                  Shop All Products
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('featured-products')} className="hover:text-gold-300 transition-colors">
-                  Nano Giloy Extract
+                <button onClick={() => onNavigate('signature-formula')} className="hover:text-gold-300 transition-colors">
+                  Bestsellers
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('featured-products')} className="hover:text-gold-300 transition-colors">
-                  Wild Forest Amla
+                <button onClick={() => onNavigate('brand-story')} className="hover:text-gold-300 transition-colors">
+                  About Us
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('featured-products')} className="hover:text-gold-300 transition-colors">
-                  Kumkumadi Radiance Elixir
+                <button onClick={() => onNavigate('newsletter')} className="hover:text-gold-300 transition-colors">
+                  Contact
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Quick Nav: Knowledge & Heritage */}
+          {/* Categories */}
           <div>
             <h4 className="text-xs font-serif uppercase tracking-[0.2em] text-gold-400 font-semibold mb-4">
-              Wisdom & Care
+              Categories
             </h4>
-            <ul className="space-y-2.5 text-xs text-ivory-200/70 font-light">
+            <ul className="space-y-2.5 text-xs text-stone-400 font-light">
               <li>
-                <button onClick={() => onNavigate('brand-story')} className="hover:text-gold-300 transition-colors">
-                  Our Philosophy
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('gold-silver-alchemy')} className="hover:text-gold-300 transition-colors">
-                  Gold & Silver Alchemy
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('ingredients-experience')} className="hover:text-gold-300 transition-colors">
-                  Botanical Glossary
-                </button>
-              </li>
-              <li>
-                <button onClick={onOpenExpert} className="hover:text-gold-300 transition-colors">
-                  Ayurvedic Doctor Consultation
+                <button onClick={() => onNavigate('wellness-goals')} className="hover:text-gold-300 transition-colors">
+                  Vitality & Strength
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('wellness-goals')} className="hover:text-gold-300 transition-colors">
-                  Dinacharya Guide
+                  Blood Sugar Support
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('wellness-goals')} className="hover:text-gold-300 transition-colors">
+                  Daily Wellness
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('wellness-goals')} className="hover:text-gold-300 transition-colors">
+                  Immunity Support
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('wellness-goals')} className="hover:text-gold-300 transition-colors">
+                  Holistic Care
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Legal & Orders */}
+          {/* Concierge & Support */}
           <div>
             <h4 className="text-xs font-serif uppercase tracking-[0.2em] text-gold-400 font-semibold mb-4">
               Concierge
             </h4>
-            <ul className="space-y-2.5 text-xs text-ivory-200/70 font-light">
+            <ul className="space-y-2.5 text-xs text-stone-400 font-light">
               <li>
-                <a href="#contact" className="hover:text-gold-300 transition-colors">
-                  Shipping & Customs
+                <a href="#shipping" className="hover:text-gold-300 transition-colors">
+                  Shipping & Delivery
                 </a>
               </li>
               <li>
                 <a href="#returns" className="hover:text-gold-300 transition-colors">
-                  Returns & Integrity
+                  Returns Policy
                 </a>
               </li>
               <li>
                 <a href="#privacy" className="hover:text-gold-300 transition-colors">
-                  Privacy & Disclaimers
+                  Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-gold-300 transition-colors">
-                  Frequently Asked Questions
+                <a href="#lab-reports" className="hover:text-gold-300 transition-colors">
+                  Lab Test Certificates
                 </a>
               </li>
             </ul>
@@ -180,18 +178,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenExpert }) => {
         </div>
 
         {/* Bottom Bar: Copyright & Back to Top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ivory-300/50 font-light">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 font-light">
           <p>
-            © {new Date().getFullYear()} EGA Ayurveda. Handcrafted with reverence in India. All classical rights reserved.
+            © {new Date().getFullYear()} EGA Ayurveda. Crafted with elegance. All classical rights reserved.
           </p>
 
           <div className="flex items-center gap-6">
-            <span className="text-[11px] text-ivory-300/40">
-              Client Presentation Demo Concept
+            <span className="text-[11px] text-stone-600">
+              Luxury Client Presentation Demo
             </span>
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1.5 text-ivory-200 hover:text-gold-300 transition-colors"
+              className="flex items-center gap-1.5 text-stone-400 hover:text-gold-300 transition-colors"
             >
               <span>Back to Top</span>
               <ArrowUp className="w-3.5 h-3.5" />

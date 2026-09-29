@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Testimonial } from '../types';
+import type { Testimonial } from '../types';
 import { Star, ChevronLeft, ChevronRight, Quote, ShieldCheck } from 'lucide-react';
 
 interface TestimonialsSectionProps {
@@ -20,17 +20,17 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   };
 
   return (
-    <section className="py-24 sm:py-32 bg-ivory-50 bg-grain border-b border-sage-200/70 overflow-hidden">
+    <section className="py-24 sm:py-32 bg-stone-100/60 border-b border-stone-200/80 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
           <div>
-            <span className="text-xs font-serif uppercase tracking-[0.25em] text-forest-700 font-semibold block mb-2">
-              Lived Experiences
+            <span className="text-xs font-serif uppercase tracking-[0.25em] text-gold-700 font-semibold block mb-2">
+              Patron Experiences
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-light text-forest-950 tracking-tight">
-              Words From The Mindful Community
+            <h2 className="font-serif text-3xl sm:text-5xl font-light text-stone-950 tracking-tight">
+              Words from the Mindful Community
             </h2>
           </div>
 
@@ -38,14 +38,14 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
           <div className="flex items-center gap-2">
             <button
               onClick={prevSlide}
-              className="p-3 rounded-full bg-white border border-sage-200 hover:border-forest-900 text-forest-900 transition-colors shadow-xs"
+              className="p-3 rounded-full bg-white border border-stone-200 hover:border-stone-950 text-stone-900 transition-colors shadow-xs"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
-              className="p-3 rounded-full bg-forest-900 text-ivory-50 hover:bg-forest-850 transition-colors shadow-xs"
+              className="p-3 rounded-full bg-stone-950 text-ivory-50 hover:bg-stone-900 transition-colors shadow-xs"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-5 h-5" />
@@ -61,38 +61,34 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
               className={`p-8 rounded-3xl bg-white border transition-all duration-500 flex flex-col justify-between ${
                 currentIndex === idx
                   ? 'border-gold-500/60 shadow-xl ring-1 ring-gold-500/20'
-                  : 'border-sage-200/80 shadow-xs hover:border-sage-300'
+                  : 'border-stone-200/80 shadow-xs hover:border-stone-300'
               }`}
             >
               <div>
-                {/* Top: Stars and Quote icon */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-1 text-amber-500">
                     {[...Array(test.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <Quote className="w-6 h-6 text-sage-200/80" />
+                  <Quote className="w-6 h-6 text-stone-300" />
                 </div>
 
-                {/* Formulation reference */}
-                <span className="text-[10px] font-serif uppercase tracking-widest text-forest-700 font-semibold block mb-2">
+                <span className="text-[10px] font-serif uppercase tracking-widest text-gold-700 font-semibold block mb-2">
                   Ritual: {test.productName}
                 </span>
 
-                {/* Comment */}
-                <p className="text-xs sm:text-sm text-forest-900/80 leading-relaxed font-light italic">
+                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-light italic">
                   “{test.comment}”
                 </p>
               </div>
 
-              {/* Author & Verification */}
-              <div className="mt-8 pt-4 border-t border-sage-100 flex items-center justify-between">
+              <div className="mt-8 pt-4 border-t border-stone-100 flex items-center justify-between">
                 <div>
-                  <h4 className="text-xs font-serif font-semibold text-forest-950">
+                  <h4 className="text-xs font-serif font-semibold text-stone-950">
                     {test.name}
                   </h4>
-                  <span className="text-[11px] text-forest-700/60 font-light block">
+                  <span className="text-[11px] text-stone-500 font-light block">
                     {test.location}
                   </span>
                 </div>
