@@ -157,7 +157,7 @@ export function AppContent() {
             onExploreProduct={handleSelectProductById}
           />
 
-          {/* SECTION 8: Horizontal Product Discovery (Explore Ayurveda with EGA Reference Collection) */}
+          {/* SECTION 8: Horizontal Product Discovery (Explore Ayurveda with TOP Ayurveda Collection) */}
           <HorizontalProductDiscovery
             products={FEATURED_PRODUCTS}
             onSelectProduct={handleSelectProduct}

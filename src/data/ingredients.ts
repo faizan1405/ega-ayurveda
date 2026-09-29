@@ -25,7 +25,7 @@ export const BOTANICAL_INGREDIENTS: BotanicalIngredient[] = [
     doshaAffinity: 'Tridoshic (Harmonizes Vata, Pitta & Kapha)',
     rasa: 'Amla (Sour), Kashaya (Astringent), Madhura, Tikta, Katu',
     image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80',
-    featuredIn: ['EGA Swarna Chyawanprash', 'EGA Colon Cleanser'],
+    featuredIn: ['TOP Ayurveda Swarna Chyawanprash', 'TOP Ayurveda Colon Cleanser'],
   },
   {
     id: 'shilajit',
@@ -51,7 +51,7 @@ export const BOTANICAL_INGREDIENTS: BotanicalIngredient[] = [
     doshaAffinity: 'Pacifies Kapha & Vata, Balances Pitta in moderation',
     rasa: 'Tikta (Bitter), Katu (Pungent)',
     image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=600&q=80',
-    featuredIn: ['Kumkumadi Tejas Glow Facial Oil', 'EGA Swarna Chyawanprash'],
+    featuredIn: ['Kumkumadi Tejas Glow Facial Oil', 'TOP Ayurveda Swarna Chyawanprash'],
   },
   {
     id: 'moringa',
@@ -77,7 +77,7 @@ export const BOTANICAL_INGREDIENTS: BotanicalIngredient[] = [
     doshaAffinity: 'Tridoshic (Balances all three Doshas)',
     rasa: 'Pancharasa (Possesses 5 of the 6 Ayurvedic tastes)',
     image: 'https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=600&q=80',
-    featuredIn: ['EGA Colon Cleanser', 'EGA Daily Lax Tablets'],
+    featuredIn: ['TOP Ayurveda Colon Cleanser', 'TOP Ayurveda Daily Lax Tablets'],
   },
   {
     id: 'neem',

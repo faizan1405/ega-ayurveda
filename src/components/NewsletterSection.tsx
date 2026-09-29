@@ -11,7 +11,7 @@ export const NewsletterSection: React.FC = () => {
     e.preventDefault();
     if (!email || !email.includes('@')) return;
     setSubscribed(true);
-    showToast('Namaste! You have joined the EGA Ayurveda Ritual Circle.');
+    showToast('Namaste! You have joined the TOP Ayurveda Ritual Circle.');
   };
 
   return (

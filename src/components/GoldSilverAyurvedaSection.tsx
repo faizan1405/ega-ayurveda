@@ -153,7 +153,7 @@ export const GoldSilverAyurvedaSection: React.FC<GoldSilverProps> = ({
                   Featured in Formulations:
                 </strong>
                 <ul className="list-disc list-inside space-y-1 text-[11px] text-stone-300">
-                  <li>EGA Swarna Chyawanprash with Real Gold</li>
+                  <li>TOP Ayurveda Swarna Chyawanprash with Real Gold</li>
                   <li>Premium Shilajit Resin (Gold Grade)</li>
                   <li>Ashwagandha Gold KSM-66</li>
                 </ul>

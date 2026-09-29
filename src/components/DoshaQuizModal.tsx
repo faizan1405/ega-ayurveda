@@ -107,10 +107,10 @@ export const DoshaQuizModal: React.FC<DoshaQuizModalProps> = ({
 
   const recommendedProductId =
     dominant === 'vata'
-      ? 'ega-nervega-gold-silver'
+      ? 'ekangveer-ras-vati'
       : dominant === 'pitta'
-      ? 'ega-nano-giloy-extract'
-      : 'ega-wild-forest-amla-tablets';
+      ? 'kumkumadi-tejas-glow-oil'
+      : 'premium-shilajit-resin';
 
   const recommendedProduct =
     products.find((p) => p.id === recommendedProductId) || products[0];

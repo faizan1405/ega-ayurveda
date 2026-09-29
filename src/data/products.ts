@@ -440,11 +440,11 @@ export const FEATURED_PRODUCTS: Product[] = [
     category: 'Skin & Radiance',
   },
 
-  // --- 6. SECONDARY EGA REFERENCE: Swarna Chyawanprash with Real Gold ---
+  // --- 6. SECONDARY TOP AYURVEDA REFERENCE: Swarna Chyawanprash with Real Gold ---
   {
     id: 'swarna-chyawanprash',
     slug: 'swarna-chyawanprash-real-gold',
-    name: 'EGA Swarna Chyawanprash with Real Gold',
+    name: 'TOP Ayurveda Swarna Chyawanprash with Real Gold',
     sanskritName: 'स्वर्ण च्यवनप्राश (अमृत रसायन)',
     shortPurpose: 'Immunity Shield, Ojas Vitality & Cellular Rejuvenation',
     subtitle: 'Infused with 24K Swarna Bhasma, Wild Forest Amla, A2 Vedic Ghee & Saffron',
@@ -529,11 +529,11 @@ export const FEATURED_PRODUCTS: Product[] = [
     category: 'Premium Ayurveda',
   },
 
-  // --- 7. SECONDARY EGA REFERENCE: Colon Cleanser ---
+  // --- 7. SECONDARY TOP AYURVEDA REFERENCE: Colon Cleanser ---
   {
     id: 'colon-cleanser',
-    slug: 'ega-colon-cleanser-detox',
-    name: 'EGA Colon Cleanser',
+    slug: 'top-ayurveda-colon-cleanser-detox',
+    name: 'TOP Ayurveda Colon Cleanser',
     sanskritName: 'कोष्ठा विशोधक चूर्ण (अग्नि दीपन)',
     shortPurpose: 'Digestive Detox, Agni Igniter & Metabolic Cleansing',
     subtitle: 'Synergistic Blend of Organic Triphala, Senna Leaf, Castor & Fennel',
@@ -590,7 +590,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     },
     faqs: [
       {
-        question: 'Is EGA Colon Cleanser safe to take every night?',
+        question: 'Is TOP Ayurveda Colon Cleanser safe to take every night?',
         answer:
           'It is formulated to be gentle and non-griping. It can be taken for 14-21 consecutive days during seasonal cleanses, or 2-3 nights a week for maintenance.',
       },
@@ -611,11 +611,11 @@ export const FEATURED_PRODUCTS: Product[] = [
     category: 'Digestive',
   },
 
-  // --- 8. SECONDARY EGA REFERENCE: Daily Lax Tablets ---
+  // --- 8. SECONDARY TOP AYURVEDA REFERENCE: Daily Lax Tablets ---
   {
     id: 'daily-lax',
-    slug: 'ega-daily-lax-tablets',
-    name: 'EGA Daily Lax Tablets',
+    slug: 'top-ayurveda-daily-lax-tablets',
+    name: 'TOP Ayurveda Daily Lax Tablets',
     sanskritName: 'सुख विरेचन वटी (मृदु शोधन)',
     shortPurpose: 'Gentle Overnight Bowel Motility & Gut Regularity',
     subtitle: 'Standardized Triphala, Nishoth & Senna Leaf for Predictable Morning Ease',
@@ -692,7 +692,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     category: 'Digestive',
   },
 
-  // --- 9. SECONDARY EGA REFERENCE: Ashwagandha PT100 Herbal Tea ---
+  // --- 9. SECONDARY TOP AYURVEDA REFERENCE: Ashwagandha PT100 Herbal Tea ---
   {
     id: 'ashwagandha-pt100-tea',
     slug: 'ashwagandha-pt100-herbal-tea',
@@ -773,7 +773,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     category: 'Daily Wellness',
   },
 
-  // --- 10. SECONDARY EGA REFERENCE: Organic Moringa Leaf Tablets ---
+  // --- 10. SECONDARY TOP AYURVEDA REFERENCE: Organic Moringa Leaf Tablets ---
   {
     id: 'organic-moringa-tablets',
     slug: 'organic-moringa-leaf-tablets',
@@ -847,7 +847,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     category: 'Daily Wellness',
   },
 
-  // --- 11. SECONDARY EGA REFERENCE: Ayurvedic Oil Pulling Formula ---
+  // --- 11. SECONDARY TOP AYURVEDA REFERENCE: Ayurvedic Oil Pulling Formula ---
   {
     id: 'ayurvedic-oil-pulling',
     slug: 'ayurvedic-oil-pulling-gandusha-formula',

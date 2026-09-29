@@ -32,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-1.5 cursor-pointer mb-3" onClick={scrollToTop}>
               <span className="font-display font-medium text-3xl tracking-[0.25em] text-ivory-50 uppercase">
-                EGA
+                TOP
               </span>
               <span className="w-1.5 h-1.5 rounded-full bg-gold-400 mb-1" />
               <span className="text-[10px] tracking-[0.35em] uppercase text-gold-300/80 font-serif italic ml-1">
@@ -180,7 +180,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         {/* Bottom Bar: Copyright & Back to Top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 font-light">
           <p>
-            © {new Date().getFullYear()} EGA Ayurveda. Crafted with elegance. All classical rights reserved.
+            © {new Date().getFullYear()} TOP Ayurveda. Crafted with elegance. All classical rights reserved.
           </p>
 
           <div className="flex items-center gap-6">

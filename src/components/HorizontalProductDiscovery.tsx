@@ -17,7 +17,7 @@ export const HorizontalProductDiscovery: React.FC<HorizontalProductDiscoveryProp
   const { addToCart } = useCart();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  // Focus on the secondary curated EGA products + complementary items
+  // Focus on the secondary curated TOP Ayurveda products + complementary items
   const discoveryProducts = products.filter(
     (p) =>
       p.id === 'swarna-chyawanprash' ||

@@ -59,10 +59,10 @@ export const CheckoutModal: React.FC = () => {
         <div className="p-5 border-b border-sage-200 bg-white flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="font-display text-xl font-medium tracking-widest text-forest-950 uppercase">
-              EGA
+              TOP Ayurveda
             </span>
             <span className="text-xs font-serif uppercase tracking-wider text-forest-700">
-              | Demo Concierge Checkout
+              | Concierge Checkout
             </span>
           </div>
 
@@ -236,7 +236,7 @@ export const CheckoutModal: React.FC = () => {
             </h3>
 
             <p className="text-xs text-forest-800/80 max-w-sm mx-auto leading-relaxed font-light">
-              Order <strong>#EGA-{Math.floor(100000 + Math.random() * 900000)}</strong> has been received by our Ayurvedic dispensary. Handcrafted formulations will be dispatched in protective amber glass packaging.
+              Order <strong>#TOP-{Math.floor(100000 + Math.random() * 900000)}</strong> has been received by our Ayurvedic dispensary. Handcrafted formulations will be dispatched in protective amber glass packaging.
             </p>
 
             <div className="p-4 rounded-2xl bg-white border border-sage-200 text-left text-xs space-y-1.5 max-w-sm mx-auto">
@@ -258,7 +258,7 @@ export const CheckoutModal: React.FC = () => {
               onClick={handleCloseAndReset}
               className="mt-6 px-8 py-3.5 rounded-full bg-forest-900 text-ivory-50 text-xs uppercase tracking-[0.16em] font-semibold hover:bg-forest-850 transition-colors"
             >
-              Continue Exploring EGA
+              Continue Exploring TOP Ayurveda
             </button>
           </div>
         )}

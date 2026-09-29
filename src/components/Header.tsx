@@ -80,7 +80,7 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <div className="flex items-center gap-1.5">
                 <span className="font-display font-medium text-2xl sm:text-3xl tracking-[0.28em] text-stone-950 uppercase">
-                  top
+                  TOP
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-gold-500 mb-1" />
               </div>
@@ -132,7 +132,7 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="flex items-center justify-between pb-6 border-b border-stone-200">
                 <div className="flex flex-col">
                   <span className="font-display font-medium text-2xl tracking-[0.25em] text-stone-950 uppercase">
-                    EGA
+                    TOP
                   </span>
                   <span className="text-[10px] tracking-[0.3em] uppercase text-stone-600 font-serif italic">
                     Ayurveda

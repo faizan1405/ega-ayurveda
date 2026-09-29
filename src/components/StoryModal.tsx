@@ -29,7 +29,7 @@ export const StoryModal: React.FC<StoryModalProps> = ({
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-forest-900" />
             <span className="font-serif text-lg font-medium text-forest-950">
-              The Lineage of EGA Ayurveda
+              The Lineage of TOP Ayurveda
             </span>
           </div>
 
@@ -55,7 +55,7 @@ export const StoryModal: React.FC<StoryModalProps> = ({
               Modern medicine is magnificent at emergency trauma and crisis intervention. Yet, the human soul and cellular structure crave something more enduring: the daily preservation of radiant vitality.
             </p>
             <p className="mt-2">
-              EGA was founded on the singular conviction that human beings were never designed to exist in a chronic state of low-grade inflammation, sleepless exhaustion, and digestive congestion. Five millennia ago, the sages of the Vedic civilization articulated a comprehensive science of living: <em>Ayus</em> (Life) and <em>Veda</em> (Wisdom).
+              TOP Ayurveda was founded on the singular conviction that human beings were never designed to exist in a chronic state of low-grade inflammation, sleepless exhaustion, and digestive congestion. Five millennia ago, the sages of the Vedic civilization articulated a comprehensive science of living: <em>Ayus</em> (Life) and <em>Veda</em> (Wisdom).
             </p>
           </div>
 
@@ -76,7 +76,7 @@ export const StoryModal: React.FC<StoryModalProps> = ({
               One of the most frequently misunderstood realms of authentic Ayurveda is Rasashastra (mineral alchemy). Through dozens of rigorous purification cycles (Shodhana) and closed-fire calcinations (Marana), pure 24-karat gold and silver are reduced to colloidal nano-particles that are completely non-toxic and deeply rejuvenating to nervous tissue.
             </p>
             <p className="mt-2">
-              At EGA, our Swarna and Rajata preparations are tested via ICP-MS spectroscopy to guarantee the absence of free heavy metals, adhering stringently to the Ayurvedic Pharmacopoeia of India.
+              At TOP Ayurveda, our Swarna and Rajata preparations are tested via ICP-MS spectroscopy to guarantee the absence of free heavy metals, adhering stringently to the Ayurvedic Pharmacopoeia of India.
             </p>
           </div>
 

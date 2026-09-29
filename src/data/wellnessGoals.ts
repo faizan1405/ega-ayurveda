@@ -112,7 +112,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Aditya Singhal',
     location: 'Golf Links, New Delhi',
     rating: 5,
-    productName: 'EGA Swarna Chyawanprash with Real Gold',
+    productName: 'TOP Ayurveda Swarna Chyawanprash with Real Gold',
     comment:
       'The addition of authentic 24K Swarna Bhasma and A2 Gir cow ghee gives this Chyawanprash an unmistakable texture and vitality boost. My immune armor for the winter.',
     verified: true,
