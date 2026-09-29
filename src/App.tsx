@@ -3,25 +3,27 @@ import { CartProvider } from './context/CartContext';
 import { FEATURED_PRODUCTS } from './data/products';
 import { BOTANICAL_INGREDIENTS } from './data/ingredients';
 import { WELLNESS_GOALS, TESTIMONIALS } from './data/wellnessGoals';
-import { Product } from './types';
+import type { Product } from './types';
 
 // Components
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { BrandPhilosophyStrip } from './components/BrandPhilosophyStrip';
-import { FeaturedProductsGrid } from './components/FeaturedProductsGrid';
-import { FeaturedProductStory } from './components/FeaturedProductStory';
-import { GoldSilverAyurvedaSection } from './components/GoldSilverAyurvedaSection';
-import { WhyEgaSection } from './components/WhyEgaSection';
-import { IngredientExperience } from './components/IngredientExperience';
+import { SignatureFiveShowcase } from './components/SignatureFiveShowcase';
+import { BrandStorySection } from './components/BrandStorySection';
 import { ShopByWellnessGoal } from './components/ShopByWellnessGoal';
+import { ShilajitScrollStory } from './components/ShilajitScrollStory';
+import { GoldSilverAyurvedaSection } from './components/GoldSilverAyurvedaSection';
+import { HorizontalProductDiscovery } from './components/HorizontalProductDiscovery';
+import { IngredientExperience } from './components/IngredientExperience';
+import { WhyEgaSection } from './components/WhyEgaSection';
 import { AyurvedaExpertSection } from './components/AyurvedaExpertSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
-import { BrandStorySection } from './components/BrandStorySection';
 import { NewsletterSection } from './components/NewsletterSection';
 import { Footer } from './components/Footer';
 
-// Modals & Detail
+// Views & Modals
+import { ShopCatalogView } from './components/ShopCatalogView';
 import { ProductDetailPage } from './components/ProductDetailPage';
 import { CartDrawer } from './components/CartDrawer';
 import { CheckoutModal } from './components/CheckoutModal';
@@ -33,7 +35,7 @@ import { StoryModal } from './components/StoryModal';
 import { Toast } from './components/Toast';
 
 export function AppContent() {
-  const [currentView, setCurrentView] = useState<'home' | 'product-detail'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'product-detail' | 'shop'>('home');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -53,17 +55,27 @@ export function AppContent() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const handleNavigate = (sectionId: string) => {
+  const handleNavigate = (target: string) => {
+    if (target === 'shop') {
+      setCurrentView('shop');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    if (target === 'home') {
+      setCurrentView('home');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     if (currentView !== 'home') {
       setCurrentView('home');
       setTimeout(() => {
-        const element = document.getElementById(sectionId);
+        const element = document.getElementById(target);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }, 100);
     } else {
-      const element = document.getElementById(sectionId);
+      const element = document.getElementById(target);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
@@ -88,12 +100,12 @@ export function AppContent() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const heroProduct = FEATURED_PRODUCTS[0]; // EGA Swarna Chyawanprash
+  const heroProduct = FEATURED_PRODUCTS[0]; // Premium Shilajit Resin
 
   return (
-    <div className="min-h-screen bg-ivory-50 text-forest-950 font-sans selection:bg-forest-800 selection:text-ivory-50">
+    <div className="min-h-screen bg-ivory-50 text-stone-900 font-sans selection:bg-stone-900 selection:text-ivory-50">
       
-      {/* Header */}
+      {/* Sticky Luxury Header */}
       <Header
         onNavigate={handleNavigate}
         onOpenSearch={() => setIsSearchOpen(true)}
@@ -101,82 +113,98 @@ export function AppContent() {
         onOpenDoshaQuiz={() => setIsDoshaQuizOpen(true)}
       />
 
-      {/* Main Content Area */}
-      {currentView === 'home' ? (
+      {/* Main View Router */}
+      {currentView === 'home' && (
         <main>
-          {/* Hero Section */}
+          {/* SECTION 1: Cinematic Hero */}
           <Hero
-            onExploreCollection={() => handleNavigate('featured-products')}
+            onExploreCollection={() => handleNavigate('signature-collection')}
             onDiscoverPhilosophy={() => handleNavigate('brand-story')}
             onSelectHeroProduct={() => handleSelectProduct(heroProduct)}
           />
 
-          {/* Marquee Philosophy Strip */}
+          {/* SECTION 2: Floating Brand Promise Strip */}
           <BrandPhilosophyStrip />
 
-          {/* EXACT FIVE FEATURED PRODUCTS */}
-          <FeaturedProductsGrid
+          {/* SECTION 3: Signature 5 Product Experience (01/05 Stepped Reveal) */}
+          <SignatureFiveShowcase
             products={FEATURED_PRODUCTS}
             onSelectProduct={handleSelectProduct}
             onQuickView={(p) => setQuickViewProduct(p)}
           />
 
-          {/* Featured Product Story (Asymmetrical Editorial Split) */}
-          <FeaturedProductStory
-            heroProduct={heroProduct}
-            onViewProductDetail={handleSelectProduct}
-          />
-
-          {/* Gold & Silver Rasashastra Story */}
-          <GoldSilverAyurvedaSection
-            products={FEATURED_PRODUCTS}
-            onExploreProduct={handleSelectProductById}
-          />
-
-          {/* Why EGA Section (Trust Cards) */}
-          <WhyEgaSection />
-
-          {/* Interactive Ingredient Experience (From Nature to Ritual) */}
-          <IngredientExperience
-            ingredients={BOTANICAL_INGREDIENTS}
-            onSelectProductByIngredient={handleSelectProductById}
-          />
-
-          {/* Shop By Wellness Goal (Targeted Rituals) */}
-          <ShopByWellnessGoal
-            goals={WELLNESS_GOALS}
-            onSelectGoal={handleSelectProductById}
-          />
-
-          {/* Ayurveda Expert Consultation Section */}
-          <AyurvedaExpertSection
-            onOpenBooking={() => setIsExpertModalOpen(true)}
-          />
-
-          {/* Testimonials Editorial Carousel */}
-          <TestimonialsSection testimonials={TESTIMONIALS} />
-
-          {/* Brand Story (Food As Medicine) */}
+          {/* SECTION 4: Animated Philosophy Story (Crafted with Purity, Backed by Tradition) */}
           <BrandStorySection
             onOpenStoryModal={() => setIsStoryModalOpen(true)}
             onExplorePhilosophy={() => handleNavigate('gold-silver-alchemy')}
           />
 
-          {/* Minimal Newsletter */}
+          {/* SECTION 5: Shop by Wellness Goal (7 Curated Categories) */}
+          <ShopByWellnessGoal
+            goals={WELLNESS_GOALS}
+            onSelectGoal={handleSelectProductById}
+          />
+
+          {/* SECTION 6: Scroll-Driven Shilajit Story (Dark Cinematic Charcoal, Himalayan Rock/Resin) */}
+          <ShilajitScrollStory
+            shilajitProduct={heroProduct}
+            onExploreProduct={handleSelectProduct}
+          />
+
+          {/* SECTION 7: Gold / Swarna Ayurveda Story (Precious Ingredients, Expanding Gold Alchemy) */}
+          <GoldSilverAyurvedaSection
+            products={FEATURED_PRODUCTS}
+            onExploreProduct={handleSelectProductById}
+          />
+
+          {/* SECTION 8: Horizontal Product Discovery (Explore Ayurveda with EGA Reference Collection) */}
+          <HorizontalProductDiscovery
+            products={FEATURED_PRODUCTS}
+            onSelectProduct={handleSelectProduct}
+            onQuickView={(p) => setQuickViewProduct(p)}
+          />
+
+          {/* SECTION 9: Ingredient Storytelling (What Goes Into Wellness - 7 Sacred Ingredients) */}
+          <IngredientExperience
+            ingredients={BOTANICAL_INGREDIENTS}
+            onSelectProductByIngredient={handleSelectProductById}
+          />
+
+          {/* SECTION 10: Why Choose Us (6 Classical Trust Blocks) */}
+          <WhyEgaSection />
+
+          {/* SECTION 11: Expert Consultation (Ayurveda Vaidya Booking) */}
+          <AyurvedaExpertSection
+            onOpenBooking={() => setIsExpertModalOpen(true)}
+          />
+
+          {/* SECTION 12: Reviews (Verified Patron Testimonials) */}
+          <TestimonialsSection testimonials={TESTIMONIALS} />
+
+          {/* SECTION 13: Newsletter (Begin Your Wellness Ritual) */}
           <NewsletterSection />
         </main>
-      ) : (
-        selectedProduct && (
-          <ProductDetailPage
-            product={selectedProduct}
-            allProducts={FEATURED_PRODUCTS}
-            onBack={handleBackToHome}
-            onSelectProduct={handleSelectProduct}
-          />
-        )
       )}
 
-      {/* Luxury Forest-Green Footer */}
+      {currentView === 'shop' && (
+        <ShopCatalogView
+          products={FEATURED_PRODUCTS}
+          onBack={handleBackToHome}
+          onSelectProduct={handleSelectProduct}
+          onQuickView={(p) => setQuickViewProduct(p)}
+        />
+      )}
+
+      {currentView === 'product-detail' && selectedProduct && (
+        <ProductDetailPage
+          product={selectedProduct}
+          allProducts={FEATURED_PRODUCTS}
+          onBack={handleBackToHome}
+          onSelectProduct={handleSelectProduct}
+        />
+      )}
+
+      {/* SECTION 14: Premium Footer */}
       <Footer
         onNavigate={handleNavigate}
         onOpenExpert={() => setIsExpertModalOpen(true)}
@@ -212,11 +240,11 @@ export function AppContent() {
         onClose={() => setIsStoryModalOpen(false)}
         onExploreProducts={() => {
           setIsStoryModalOpen(false);
-          handleNavigate('featured-products');
+          handleNavigate('signature-collection');
         }}
       />
 
-      {/* Toast feedback */}
+      {/* Global Feedback Toast */}
       <Toast />
 
     </div>

@@ -6,41 +6,39 @@
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Cinzel', serif;
 
-  /* Luxury Champagne, Warm Ivory, Soft Stone & Muted Gold Palette */
-  --color-stone-950: #1a1816;
-  --color-stone-900: #262320;
-  --color-stone-850: #332f2a;
-  --color-stone-800: #423d37;
-  --color-stone-700: #5c554e;
-  --color-stone-600: #787067;
-  --color-stone-500: #999086;
-  --color-stone-400: #b5ada3;
-  --color-stone-300: #cfc8bf;
-  --color-stone-200: #e2ded7;
-  --color-stone-100: #eeeae4;
-  --color-stone-50: #f7f5f2;
+  /* Primary Palette from Design Specification */
+  --color-ivory-50: #FAF8F5;
+  --color-ivory-100: #F4F0E8;
+  --color-ivory-200: #EBE5DA;
 
-  --color-ivory-50: #fdfbf7;
-  --color-ivory-100: #f8f5ee;
-  --color-ivory-200: #f0ebe1;
-  --color-ivory-300: #e5ded2;
+  --color-limestone-100: #E5DED1;
+  --color-limestone-200: #D8D0C2;
 
-  --color-champagne-100: #f3efe6;
-  --color-champagne-200: #e7e0d3;
-  --color-champagne-300: #d6ccbd;
-  --color-champagne-400: #c2b6a3;
-  --color-champagne-500: #a99a83;
+  --color-champagne-300: #CDC8BF;
+  --color-champagne-400: #B8B2A7;
 
-  --color-gold-300: #ecd59b;
-  --color-gold-400: #d8ba6f;
-  --color-gold-500: #ba9748;
-  --color-gold-600: #9a7a32;
-  --color-gold-700: #7c6123;
+  --color-gold-400: #C49C57;
+  --color-gold-500: #A98243;
+  --color-gold-600: #8E6B33;
 
-  --color-silver-200: #edeef0;
-  --color-silver-300: #dcdfe3;
-  --color-silver-400: #c4c8ce;
-  --color-silver-500: #9fa6b0;
+  --color-olive-900: #31352A;
+  --color-olive-800: #424738;
+
+  --color-charcoal-950: #191A17;
+  --color-charcoal-900: #232520;
+  --color-charcoal-800: #343730;
+
+  --color-stone-950: #191A17;
+  --color-stone-900: #232520;
+  --color-stone-800: #343730;
+  --color-stone-700: #4B4F45;
+  --color-stone-600: #686D60;
+  --color-stone-500: #898E80;
+  --color-stone-400: #B2B5AB;
+  --color-stone-300: #CDC8BF;
+  --color-stone-200: #E5DED1;
+  --color-stone-100: #F4F0E8;
+  --color-stone-50: #FAF8F5;
 }
 
 :root {
@@ -51,26 +49,26 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-ivory-50);
-  color: #24211e;
+  background-color: #F4F0E8;
+  color: #191A17;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background-color: #ba9748;
-  color: #ffffff;
+  background-color: #A98243;
+  color: #FFFFFF;
 }
 
-/* Subtle luxury limestone / travertine grain texture */
+/* Subtle limestone & travertine texture */
 .bg-grain {
-  background-image: radial-gradient(rgba(44, 40, 36, 0.035) 1px, transparent 0);
+  background-image: radial-gradient(rgba(25, 26, 23, 0.038) 1px, transparent 0);
   background-size: 24px 24px;
 }
 
 .bg-dark-grain {
-  background-image: radial-gradient(rgba(216, 186, 111, 0.05) 1px, transparent 0);
+  background-image: radial-gradient(rgba(169, 130, 67, 0.07) 1px, transparent 0);
   background-size: 28px 28px;
 }
 
@@ -80,7 +78,7 @@ body {
     transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-8px) rotate(1.5deg);
+    transform: translateY(-8px) rotate(1deg);
   }
 }
 
@@ -93,21 +91,23 @@ body {
   }
 }
 
-@keyframes shimmerSweep {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
 @keyframes marquee {
   0% {
     transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
@@ -119,12 +119,6 @@ body {
   animation: floatGentle 8s ease-in-out infinite;
 }
 
-.animate-shimmer {
-  background: linear-gradient(90deg, transparent 0%, rgba(216, 186, 111, 0.25) 50%, transparent 100%);
-  background-size: 200% 100%;
-  animation: shimmerSweep 3s infinite;
-}
-
 .animate-marquee {
   display: flex;
   width: max-content;
@@ -133,4 +127,23 @@ body {
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+.animate-text-reveal {
+  animation: textReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F0E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #CDC8BF;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A98243;
 }

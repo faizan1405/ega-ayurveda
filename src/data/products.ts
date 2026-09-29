@@ -1,6 +1,7 @@
 import type { Product } from '../types';
 
 export const FEATURED_PRODUCTS: Product[] = [
+  // --- 1. PRIMARY CLIENT HERO PRODUCT: Premium Shilajit Resin ---
   {
     id: 'premium-shilajit-resin',
     slug: 'premium-shilajit-resin-gold-grade',
@@ -19,7 +20,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     badge: 'Pure Vegetarian',
     isBestseller: true,
     elementHighlight: 'gold',
-    featureBadges: ['80%+ Fulvic Acid', '100% Surya Tapi Purified', 'Heavy Metal Tested', 'Measuring Spoon Included'],
+    featureBadges: ['80%+ Fulvic Acid', '100% Surya Tapi Purified', 'Heavy Metal Tested', 'Brass Spoon Included'],
     image: './products/shilajit-resin.jpg',
     gallery: [
       './products/shilajit-resin.jpg',
@@ -96,8 +97,10 @@ export const FEATURED_PRODUCTS: Product[] = [
         verified: true,
       },
     ],
-    category: 'Vitality & Strength',
+    category: 'Vitality',
   },
+
+  // --- 2. PRIMARY CLIENT PRODUCT: Diacontrol ---
   {
     id: 'diacontrol-formula',
     slug: 'diacontrol-blood-sugar-wellness',
@@ -188,8 +191,10 @@ export const FEATURED_PRODUCTS: Product[] = [
         verified: true,
       },
     ],
-    category: 'Blood Sugar Support',
+    category: 'Metabolic',
   },
+
+  // --- 3. PRIMARY CLIENT PRODUCT: Ekangveer Ras Vati ---
   {
     id: 'ekangveer-ras-vati',
     slug: 'ekangveer-ras-vati-neuro-vitality',
@@ -270,6 +275,8 @@ export const FEATURED_PRODUCTS: Product[] = [
     ],
     category: 'Daily Wellness',
   },
+
+  // --- 4. PRIMARY CLIENT PRODUCT: Ashwagandha Gold KSM-66 ---
   {
     id: 'ashwagandha-gold-ksm66',
     slug: 'ashwagandha-gold-ksm66-capsules',
@@ -348,8 +355,10 @@ export const FEATURED_PRODUCTS: Product[] = [
         verified: true,
       },
     ],
-    category: 'Immunity Support',
+    category: 'Vitality',
   },
+
+  // --- 5. PRIMARY CLIENT PRODUCT: Kumkumadi Tejas Glow Facial Oil ---
   {
     id: 'kumkumadi-tejas-glow-oil',
     slug: 'kumkumadi-tejas-glow-facial-oil',
@@ -428,6 +437,494 @@ export const FEATURED_PRODUCTS: Product[] = [
         verified: true,
       },
     ],
-    category: 'Holistic Care',
+    category: 'Skin & Radiance',
+  },
+
+  // --- 6. SECONDARY EGA REFERENCE: Swarna Chyawanprash with Real Gold ---
+  {
+    id: 'swarna-chyawanprash',
+    slug: 'swarna-chyawanprash-real-gold',
+    name: 'EGA Swarna Chyawanprash with Real Gold',
+    sanskritName: 'स्वर्ण च्यवनप्राश (अमृत रसायन)',
+    shortPurpose: 'Immunity Shield, Ojas Vitality & Cellular Rejuvenation',
+    subtitle: 'Infused with 24K Swarna Bhasma, Wild Forest Amla, A2 Vedic Ghee & Saffron',
+    description:
+      'The crown jewel of Ayurvedic Rasayana alchemy. Prepared according to the classical Charaka Samhita with 48 potent Himalayan botanicals, slow-cooked wild forest Amla, pure A2 Bilona cow ghee, and fortified with micro-calcined 24K real gold (Swarna Bhasma).',
+    traditionalPreparationStory:
+      'Classical three-stage preparation over sacred wood fires, combining wild amla pulp with cold-pressed sesame oil and grass-fed A2 ghee, infused with raw forest honey and verified Swarna Bhasma nanoparticles for immediate systemic assimilation.',
+    price: 3850,
+    originalPrice: 4500,
+    rating: 4.99,
+    reviewCount: 412,
+    badge: 'Pure Vegetarian',
+    isBestseller: true,
+    elementHighlight: 'gold',
+    featureBadges: ['24K Swarna Bhasma', 'A2 Bilona Cow Ghee', 'Raw Forest Honey', '48 Vedic Herbs', 'Pure Vegetarian'],
+    image: './products/swarna-chyawanprash.jpg',
+    gallery: [
+      './products/swarna-chyawanprash.jpg',
+      './products/shilajit-resin.jpg',
+      './products/ashwagandha-gold.jpg',
+    ],
+    weightVolume: '500g Dark Amber Apothecary Jar',
+    inStock: true,
+    dosha: {
+      vata: 'Balances',
+      pitta: 'Balances',
+      kapha: 'Balances',
+    },
+    keyIngredients: [
+      {
+        name: '24K Swarna Bhasma (Gold Calx)',
+        sanskrit: 'स्वर्ण भस्म',
+        botanical: 'Purified Gold Nanoparticles',
+        benefit: 'Directly fortifies Ojas (vital immunity essence), heart strength, and mental agility.',
+        percentage: 'Classical Standardized Assay',
+      },
+      {
+        name: 'Wild Forest Amalaki',
+        sanskrit: 'वन्य आमलकी',
+        botanical: 'Phyllanthus Emblica',
+        benefit: 'Supreme natural bioflavonoid antioxidant base that preserves cellular vitality.',
+        percentage: 'Rich Botanical Pulp',
+      },
+      {
+        name: 'A2 Gir Cow Bilona Ghee',
+        sanskrit: 'गोघृत',
+        botanical: 'Grass-fed Clarified Butter',
+        benefit: 'Unlocks lipophilic phytochemicals and transports them deep into the bone marrow (Majja Dhatu).',
+        percentage: 'Pure Vedic Base',
+      },
+    ],
+    ritualHowToUse: {
+      timing: 'First thing upon waking or 1 hour before sleep',
+      dosage: '1 heaped teaspoon (10g to 15g)',
+      anupana: 'Licked directly or followed by a cup of warm A2 milk or almond milk',
+      tip: 'Savor slowly on the tongue to allow salivary enzyme activation and immediate sublingual absorption.',
+    },
+    ayurvedicCitation: {
+      text: '“च्यवनः प्राशनादस्य वयः स्थितमवाप्तवान्...” — By taking this elixir, the aged sage Chyavana regained youth, vitality, and glowing longevity.',
+      reference: 'Charaka Samhita, Chikitsa Sthana 1:1',
+    },
+    faqs: [
+      {
+        question: 'Why is this product labeled Pure Vegetarian and not 100% Vegan?',
+        answer:
+          'Classical Chyawanprash requires authentic A2 Gir cow ghee and raw forest honey to act as Yogavahi (medicinal carriers). In strict accordance with Ayurvedic tradition, it is 100% Pure Vegetarian and cruelty-free, but not vegan.',
+      },
+    ],
+    reviews: [
+      {
+        id: 'sc-1',
+        author: 'Arunav Singhal',
+        location: 'Golf Links, New Delhi',
+        rating: 5,
+        date: '15 Feb 2026',
+        title: 'The gold standard of Chyawanprash in every sense',
+        comment:
+          'Unlike commercial sweet jams, you can taste the intense amla, cooling spices, and rich ghee with visible gold shimmer. Truly a regal preparation.',
+        verified: true,
+      },
+    ],
+    category: 'Premium Ayurveda',
+  },
+
+  // --- 7. SECONDARY EGA REFERENCE: Colon Cleanser ---
+  {
+    id: 'colon-cleanser',
+    slug: 'ega-colon-cleanser-detox',
+    name: 'EGA Colon Cleanser',
+    sanskritName: 'कोष्ठा विशोधक चूर्ण (अग्नि दीपन)',
+    shortPurpose: 'Digestive Detox, Agni Igniter & Metabolic Cleansing',
+    subtitle: 'Synergistic Blend of Organic Triphala, Senna Leaf, Castor & Fennel',
+    description:
+      'A master digestive purifier designed to dissolve stubborn toxic sludge (Ama) from the intestinal villi, restore healthy gut peristalsis, and re-ignite metabolic fire (Jatharagni) without causing cramping or electrolyte depletion.',
+    traditionalPreparationStory:
+      'Classical Virechana formulation combining cold-ground Haritaki, Bibhitaki, and Amalaki with sun-cured fennel seeds and micro-dosed botanical extracts for effortless morning elimination.',
+    price: 990,
+    originalPrice: 1250,
+    rating: 4.93,
+    reviewCount: 310,
+    badge: '100% Vegan',
+    isBestseller: true,
+    elementHighlight: 'botanical',
+    featureBadges: ['100% Vegan', 'Ama Toxin Flush', 'Non-Habit Forming', 'Gentle Night Detox'],
+    image: './products/colon-cleanser.jpg',
+    gallery: [
+      './products/colon-cleanser.jpg',
+      './products/daily-lax.jpg',
+      './products/shilajit-resin.jpg',
+    ],
+    weightVolume: '150g Ultra-Fine Botanical Powder',
+    inStock: true,
+    dosha: {
+      vata: 'Balances',
+      pitta: 'Balances',
+      kapha: 'Reduces',
+    },
+    keyIngredients: [
+      {
+        name: 'Vedic Triphala',
+        sanskrit: 'त्रिफला',
+        botanical: 'Three Sacred Fruits',
+        benefit: 'Cleanses mucosal lining, promotes regular evacuation, and tones intestinal wall musculature.',
+        percentage: 'Core Botanical Trio',
+      },
+      {
+        name: 'Wild Fennel (Saunf)',
+        sanskrit: 'मधुरिका',
+        botanical: 'Foeniculum Vulgare',
+        benefit: 'Alleviates abdominal bloating, relieves gas spasms, and cools intestinal Pitta heat.',
+        percentage: 'Aromatic Balancer',
+      },
+    ],
+    ritualHowToUse: {
+      timing: 'At bedtime, 30 minutes after dinner',
+      dosage: '1 level teaspoon (approx. 5g) in warm water',
+      anupana: 'Warm water or warm mint infusion',
+      tip: 'Drink plenty of room-temperature water throughout the following day to facilitate smooth lymphatic drainage.',
+    },
+    ayurvedicCitation: {
+      text: '“रोगाः सर्वेऽपि मन्देऽग्नौ सुतरामुदराणि च...” — All physiological ailments originate from sluggish digestive fire (Manda Agni) and toxic accumulation.',
+      reference: 'Ashtanga Hridaya, Nidana Sthana 12:1',
+    },
+    faqs: [
+      {
+        question: 'Is EGA Colon Cleanser safe to take every night?',
+        answer:
+          'It is formulated to be gentle and non-griping. It can be taken for 14-21 consecutive days during seasonal cleanses, or 2-3 nights a week for maintenance.',
+      },
+    ],
+    reviews: [
+      {
+        id: 'cc-1',
+        author: 'Ritu Agarwal',
+        location: 'Gurugram',
+        rating: 5,
+        date: '10 Feb 2026',
+        title: 'Finally relieved from years of chronic bloating',
+        comment:
+          'Completely transformed my digestion. No severe cramps, just light and clean mornings. The silver tin looks beautiful in my kitchen.',
+        verified: true,
+      },
+    ],
+    category: 'Digestive',
+  },
+
+  // --- 8. SECONDARY EGA REFERENCE: Daily Lax Tablets ---
+  {
+    id: 'daily-lax',
+    slug: 'ega-daily-lax-tablets',
+    name: 'EGA Daily Lax Tablets',
+    sanskritName: 'सुख विरेचन वटी (मृदु शोधन)',
+    shortPurpose: 'Gentle Overnight Bowel Motility & Gut Regularity',
+    subtitle: 'Standardized Triphala, Nishoth & Senna Leaf for Predictable Morning Ease',
+    description:
+      'A refined classical tablet formulated for gentle, predictable overnight intestinal motility. Alleviates stubborn constipation, gas distension, and heaviness while tonifying the colon wall for lasting physiological rhythm.',
+    traditionalPreparationStory:
+      'Formulated in convenient plant-cellulose tablets utilizing classical Bhavana extraction to eliminate bitter taste while preserving full therapeutic potency of natural anthraquinones.',
+    price: 850,
+    originalPrice: 1050,
+    rating: 4.88,
+    reviewCount: 165,
+    badge: '100% Vegan',
+    isBestseller: false,
+    elementHighlight: 'botanical',
+    featureBadges: ['100% Vegan', 'Gentle Regularity', 'No Spasms', 'Classical Vati'],
+    image: './products/daily-lax.jpg',
+    gallery: [
+      './products/daily-lax.jpg',
+      './products/colon-cleanser.jpg',
+    ],
+    weightVolume: '120 Pure Botanical Tablets',
+    inStock: true,
+    dosha: {
+      vata: 'Balances',
+      pitta: 'Balances',
+      kapha: 'Reduces',
+    },
+    keyIngredients: [
+      {
+        name: 'Nishoth Root',
+        sanskrit: 'त्रिवृत्',
+        botanical: 'Operculina Turpethum',
+        benefit: 'Classical Sukha Virechaka (gentle purgative) that soothes the lower intestine.',
+        percentage: 'Standardized Extract',
+      },
+      {
+        name: 'Haritaki',
+        sanskrit: 'हरीतकी',
+        botanical: 'Terminalia Chebula',
+        benefit: 'Mother of herbs; stimulates downward Apana Vata energy for natural elimination.',
+        percentage: 'Botanical Pulp',
+      },
+    ],
+    ritualHowToUse: {
+      timing: 'Night before sleep with a full glass of lukewarm water',
+      dosage: '1 to 2 tablets',
+      anupana: 'Warm water or ginger tea',
+      tip: 'Do not chew; swallow with warm water to activate the time-release botanical compounds.',
+    },
+    ayurvedicCitation: {
+      text: '“त्रिवृत्सुखविरेचनानां श्रेष्ठा...” — Among all botanicals that provide gentle, effortless elimination, Trivrit is supreme.',
+      reference: 'Charaka Samhita, Sutra Sthana 25',
+    },
+    faqs: [
+      {
+        question: 'Does Daily Lax cause dependency?',
+        answer:
+          'No. Because it relies on restorative Triphala and tonifying Haritaki rather than harsh synthetic laxatives, it helps retrain natural intestinal peristalsis.',
+      },
+    ],
+    reviews: [
+      {
+        id: 'dl-1',
+        author: 'Prakash Sharma',
+        location: 'Jaipur, Rajasthan',
+        rating: 5,
+        date: '20 Jan 2026',
+        title: 'Mild, effective, and zero morning cramps',
+        comment:
+          'Works reliably within 7 to 8 hours without painful abdominal cramps. Very pleased with the packaging and purity.',
+        verified: true,
+      },
+    ],
+    category: 'Digestive',
+  },
+
+  // --- 9. SECONDARY EGA REFERENCE: Ashwagandha PT100 Herbal Tea ---
+  {
+    id: 'ashwagandha-pt100-tea',
+    slug: 'ashwagandha-pt100-herbal-tea',
+    name: 'Ashwagandha PT100 Herbal Tea',
+    sanskritName: 'अश्वगंधा शामक चाय (मनः शान्ति)',
+    shortPurpose: 'Evening Nervous Calming, De-Stressing & Restorative Slumber',
+    subtitle: 'Fine-Cut Withania Somnifera, Tulsi, Cardamom & Chamomile Blossoms',
+    description:
+      'A deeply soothing adaptogenic evening tea crafted to calm sensory overload, unwind mental chattering, and gently down-regulate cortisol levels at the close of an active day. Packaged in a brushed champagne airtight canister.',
+    traditionalPreparationStory:
+      'Slow-cured organic Ashwagandha root shavings blended with Krishna Tulsi leaves, green cardamom pods, and chamomile petals, maintaining delicate volatile oils for maximum aromatherapeutic comfort.',
+    price: 1150,
+    originalPrice: 1400,
+    rating: 4.94,
+    reviewCount: 228,
+    badge: '100% Vegan',
+    isBestseller: false,
+    elementHighlight: 'botanical',
+    featureBadges: ['100% Vegan', 'Caffeine-Free', 'Whole Leaf Shavings', 'Airtight Champagne Tin'],
+    image: './products/ashwagandha-tea.jpg',
+    gallery: [
+      './products/ashwagandha-tea.jpg',
+      './products/ashwagandha-gold.jpg',
+    ],
+    weightVolume: '100g Loose Leaf Tea Tin',
+    inStock: true,
+    dosha: {
+      vata: 'Balances',
+      pitta: 'Balances',
+      kapha: 'Neutral',
+    },
+    keyIngredients: [
+      {
+        name: 'Whole Root Ashwagandha',
+        sanskrit: 'अश्वगंधा',
+        botanical: 'Withania Somnifera',
+        benefit: 'Balances sympathetic nervous system tone and cushions daily mental strain.',
+        percentage: '45% Blend Base',
+      },
+      {
+        name: 'Krishna Tulsi',
+        sanskrit: 'तुलसी',
+        botanical: 'Ocimum Sanctum',
+        benefit: 'Spiritual botanical adaptogen that clears the throat chakra and respiratory passages.',
+        percentage: 'Aromatic Shavings',
+      },
+    ],
+    ritualHowToUse: {
+      timing: '30 to 45 minutes before bedtime',
+      dosage: '1 teaspoon (2g to 3g) steeped in 200ml freshly boiled water for 6 minutes',
+      anupana: 'Sipped warm, plain or with raw honey',
+      tip: 'Inhale the calming botanical vapors deeply while steeping to engage the olfactory relaxation response.',
+    },
+    ayurvedicCitation: {
+      text: '“हृद्यानि च मनोनुकूलानि...” — Botanicals that gladden the heart and soothe the mind are the purest medicine.',
+      reference: 'Charaka Samhita, Sutra Sthana',
+    },
+    faqs: [
+      {
+        question: 'Does this tea contain any caffeine or artificial flavourings?',
+        answer:
+          'None whatsoever. It is 100% caffeine-free, contains zero synthetic flavours or extracts, and uses only whole botanical roots and spices.',
+      },
+    ],
+    reviews: [
+      {
+        id: 'at-1',
+        author: 'Deepika Sen',
+        location: 'Pune, Maharashtra',
+        rating: 5,
+        date: '05 Mar 2026',
+        title: 'My nightly wind-down ritual',
+        comment:
+          'The aroma is intoxicating and warm. A single cup melts away all my screen fatigue before sleep.',
+        verified: true,
+      },
+    ],
+    category: 'Daily Wellness',
+  },
+
+  // --- 10. SECONDARY EGA REFERENCE: Organic Moringa Leaf Tablets ---
+  {
+    id: 'organic-moringa-tablets',
+    slug: 'organic-moringa-leaf-tablets',
+    name: 'Organic Moringa Leaf Tablets',
+    sanskritName: 'शिग्रु पत्र वटी (प्राण शक्ति)',
+    shortPurpose: 'Whole-Food Bioavailable Multivitamin, Iron & Cellular Energy',
+    subtitle: 'Shade-Dried Organic Shigru Leaves with 90+ Nutrients and 46 Antioxidants',
+    description:
+      'Hand-harvested from pesticide-free organic farms and shade-dried below 38°C to retain raw enzymatic vitality. An extraordinary botanical superfood brimming with bio-assimilable Vitamin C, Calcium, Iron, and natural chlorophyll.',
+    traditionalPreparationStory:
+      'Prepared in adherence to classical Shigru preservation texts: leaves are harvested before dawn, washed in pure aquifer spring water, and compressed into clean tablets without chemical binders.',
+    price: 950,
+    originalPrice: 1200,
+    rating: 4.91,
+    reviewCount: 195,
+    badge: '100% Vegan',
+    isBestseller: false,
+    elementHighlight: 'botanical',
+    featureBadges: ['100% Vegan', 'Shade-Dried Below 38°C', '90+ Natural Nutrients', 'Cold-Pressed Vati'],
+    image: './products/moringa-tablets.jpg',
+    gallery: [
+      './products/moringa-tablets.jpg',
+      './products/diacontrol.jpg',
+    ],
+    weightVolume: '60 Cold-Pressed Tablets',
+    inStock: true,
+    dosha: {
+      vata: 'Balances',
+      pitta: 'Neutral',
+      kapha: 'Reduces',
+    },
+    keyIngredients: [
+      {
+        name: 'Organic Moringa Leaf Pulp',
+        sanskrit: 'शिग्रु पत्र',
+        botanical: 'Moringa Oleifera',
+        benefit: 'Delivers comprehensive micro-nutrients to oxygenate red blood cells and combat fatigue.',
+        percentage: '500mg per Tablet',
+      },
+    ],
+    ritualHowToUse: {
+      timing: 'Morning with breakfast or post-workout',
+      dosage: '2 tablets daily with warm water',
+      anupana: 'Warm water or fresh citrus juice',
+      tip: 'The natural Vitamin C in Moringa enhances non-heme iron absorption significantly.',
+    },
+    ayurvedicCitation: {
+      text: '“शिग्रुस्तीक्ष्णोष्णः कटुकः पाके स्वादुश्च रोचनः...” — Shigru is penetrating, appetizing, destroys Ama, and fortifies the blood.',
+      reference: 'Bhavaprakasha Nighantu, Haritakyadi Varga',
+    },
+    faqs: [
+      {
+        question: 'Are there any fillers or magnesium stearate in these tablets?',
+        answer:
+          'No. We use only 100% pure organic moringa leaf powder with acacia botanical gum as a natural pressing agent.',
+      },
+    ],
+    reviews: [
+      {
+        id: 'mr-1',
+        author: 'Ananya Roy',
+        location: 'Hyderabad',
+        rating: 5,
+        date: '14 Feb 2026',
+        title: 'Replaced my synthetic multivitamins completely',
+        comment:
+          'My energy levels in the afternoon have drastically improved. Gentle on the stomach with zero nausea.',
+        verified: true,
+      },
+    ],
+    category: 'Daily Wellness',
+  },
+
+  // --- 11. SECONDARY EGA REFERENCE: Ayurvedic Oil Pulling Formula ---
+  {
+    id: 'ayurvedic-oil-pulling',
+    slug: 'ayurvedic-oil-pulling-gandusha-formula',
+    name: 'Ayurvedic Oil Pulling Formula',
+    sanskritName: 'आरिमेदादि गण्डूष तैलम्',
+    shortPurpose: 'Classical Gandusha for Oral Microbiome & Gum Vitality',
+    subtitle: 'Cold-Pressed Black Sesame Oil Steeped with Clove, Cardamom, Mint & 24 Vedic Herbs',
+    description:
+      'The sacred morning Ayurvedic ritual of Gandusha / Kavala Graha. Formulated with cold-pressed virgin black sesame oil cured with classical Arimedadi botanicals to draw out lipid-soluble oral toxins, strengthen enamel, banish bad breath, and tighten gums.',
+    traditionalPreparationStory:
+      'Cooked over slow embers for 7 days according to classical Charaka Samhita guidelines, infusing cloves, cinnamon, neem bark, and licorice root into unrefined sesame lipids.',
+    price: 1350,
+    originalPrice: 1650,
+    rating: 4.97,
+    reviewCount: 240,
+    badge: '100% Vegan',
+    isBestseller: true,
+    elementHighlight: 'botanical',
+    featureBadges: ['100% Vegan', 'Virgin Cold-Pressed Sesame', 'Zero Alcohol or Synthetic Dyes', 'Pump Dispenser'],
+    image: './products/oil-pulling.jpg',
+    gallery: [
+      './products/oil-pulling.jpg',
+      './products/kumkumadi-oil.jpg',
+    ],
+    weightVolume: '200ml Heavy Amber Glass Bottle',
+    inStock: true,
+    dosha: {
+      vata: 'Balances',
+      pitta: 'Balances',
+      kapha: 'Balances',
+    },
+    keyIngredients: [
+      {
+        name: 'Arimeda Bark & Clove Oil',
+        sanskrit: 'आरिमेद एवं लवङ्ग',
+        botanical: 'Acacia Farnesiana & Syzygium Aromaticum',
+        benefit: 'Combats oral bacteria, reduces gum bleeding, and provides long-lasting breath freshness.',
+        percentage: 'Traditional Extract Blend',
+      },
+      {
+        name: 'Cold-Pressed Black Sesame Oil',
+        sanskrit: 'तिल तैल (कृष्ण तिल)',
+        botanical: 'Sesamum Indicum',
+        benefit: 'The premier Ayurvedic base for lipid-soluble toxin extraction and tooth mineralization.',
+        percentage: 'Virgin Cold-Pressed Base',
+      },
+    ],
+    ritualHowToUse: {
+      timing: 'First thing upon waking, before drinking water or brushing teeth',
+      dosage: '1 to 2 tablespoons (approx. 10ml to 15ml)',
+      anupana: 'Swished and pulled gently between teeth for 5 to 10 minutes',
+      tip: 'Spit into a trash bin (not the drain) once the oil turns milky white, then rinse mouth with warm saline water.',
+    },
+    ayurvedicCitation: {
+      text: '“न चास्य दन्तरोगः स्यात् न मुखशोषः प्रजायते...” — One who practices daily sesame oil swishing shall never suffer from tooth decay, tooth pain, or dry mouth.',
+      reference: 'Charaka Samhita, Sutra Sthana 5:78',
+    },
+    faqs: [
+      {
+        question: 'Should I swallow the oil after swishing?',
+        answer:
+          'Never swallow the oil. During the pulling process, the lipid matrix binds oral toxins and bacteria (Ama) that must be expelled completely.',
+      },
+    ],
+    reviews: [
+      {
+        id: 'op-1',
+        author: 'Siddharth Varma',
+        location: 'Bandra West, Mumbai',
+        rating: 5,
+        date: '28 Jan 2026',
+        title: 'A deeply restorative morning ritual',
+        comment:
+          'The amber glass and gold dispenser make it a joy to use every morning. Teeth feel dentist-clean all day and gums have noticeably tightened.',
+        verified: true,
+      },
+    ],
+    category: 'Ayurvedic Rituals',
   },
 ];

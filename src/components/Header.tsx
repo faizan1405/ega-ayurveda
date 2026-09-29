@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, ShoppingBag, User, Menu, X, ArrowRight } from 'lucide-react';
+import { Search, ShoppingBag, Menu, X, ArrowRight, Sparkles } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
 interface HeaderProps {
@@ -8,7 +8,6 @@ interface HeaderProps {
   onOpenExpert?: () => void;
   onOpenDoshaQuiz?: () => void;
 }
-
 
 export const Header: React.FC<HeaderProps> = ({
   onNavigate,
@@ -31,10 +30,11 @@ export const Header: React.FC<HeaderProps> = ({
   }, []);
 
   const navLinks = [
-    { label: 'Home', id: 'hero' },
-    { label: 'Shop', id: 'featured-products' },
-    { label: 'Bestsellers', id: 'signature-formula' },
-    { label: 'About', id: 'brand-story' },
+    { label: 'Home', id: 'home' },
+    { label: 'Shop', id: 'shop' },
+    { label: 'Signature 5', id: 'signature-collection' },
+    { label: 'Explore', id: 'explore-ayurveda' },
+    { label: 'Philosophy', id: 'brand-story' },
     { label: 'Contact', id: 'newsletter' },
   ];
 
@@ -43,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ease-in-out ${
           isScrolled
-            ? 'bg-ivory-50/92 backdrop-blur-md border-b border-stone-200/60 shadow-xs py-3.5'
+            ? 'bg-ivory-50/94 backdrop-blur-md border-b border-stone-200/80 shadow-xs py-3.5'
             : 'bg-transparent py-5'
         }`}
       >
@@ -60,12 +60,12 @@ export const Header: React.FC<HeaderProps> = ({
                 <Menu className="w-5 h-5" />
               </button>
 
-              <nav className="hidden lg:flex items-center gap-8">
+              <nav className="hidden lg:flex items-center gap-7">
                 {navLinks.map((link) => (
                   <button
                     key={link.id}
                     onClick={() => onNavigate(link.id)}
-                    className="relative text-xs tracking-[0.18em] uppercase font-medium text-stone-800/80 hover:text-stone-950 transition-colors duration-200 group py-1"
+                    className="relative text-xs tracking-[0.18em] uppercase font-medium text-stone-800 hover:text-stone-950 transition-colors duration-200 group py-1"
                   >
                     {link.label}
                     <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold-600 transition-all duration-300 ease-out group-hover:w-full" />
@@ -77,7 +77,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Center: Brand Logo in Elegant Gold & Typography */}
             <div
               className="flex flex-col items-center cursor-pointer select-none"
-              onClick={() => onNavigate('hero')}
+              onClick={() => onNavigate('home')}
             >
               <div className="flex items-center gap-1.5">
                 <span className="font-display font-medium text-2xl sm:text-3xl tracking-[0.28em] text-stone-950 uppercase">
@@ -90,37 +90,27 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
             </div>
 
-            {/* Right: Search, Account, Cart */}
+            {/* Right: Search, Cart */}
             <div className="flex items-center gap-2 sm:gap-4">
               {/* Search button */}
               <button
                 onClick={onOpenSearch}
-                className="p-2 text-stone-800/80 hover:text-stone-950 transition-colors rounded-full hover:bg-stone-100/60"
+                className="p-2 text-stone-800 hover:text-stone-950 transition-colors rounded-full hover:bg-stone-100/60"
                 aria-label="Search formulations"
                 title="Search (Cmd + K)"
               >
                 <Search className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
               </button>
 
-              {/* Account button */}
-              <button
-                onClick={() => onNavigate('newsletter')}
-                className="hidden md:flex p-2 text-stone-800/80 hover:text-stone-950 transition-colors rounded-full hover:bg-stone-100/60"
-                aria-label="Account"
-                title="Account"
-              >
-                <User className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
-              </button>
-
               {/* Cart Drawer Trigger */}
               <button
                 onClick={openCart}
-                className="relative p-2 text-stone-800/80 hover:text-stone-950 transition-colors rounded-full hover:bg-stone-100/60"
-                aria-label="Open cart"
+                className="relative p-2.5 rounded-full bg-stone-950 text-ivory-50 hover:bg-stone-900 transition-all shadow-xs flex items-center justify-center"
+                aria-label={`View shopping cart with ${cartCount} items`}
               >
                 <ShoppingBag className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
                 {cartCount > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] px-1 bg-stone-900 text-ivory-50 text-[10px] font-semibold flex items-center justify-center rounded-full animate-scale-in">
+                  <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] px-1 bg-gold-500 text-stone-950 text-[10px] font-bold flex items-center justify-center rounded-full animate-scale-in">
                     {cartCount}
                   </span>
                 )}
@@ -166,7 +156,7 @@ export const Header: React.FC<HeaderProps> = ({
                       setIsMobileMenuOpen(false);
                       onNavigate(link.id);
                     }}
-                    className="flex items-center justify-between py-2 text-sm tracking-wider uppercase font-medium text-stone-900 border-b border-stone-100 text-left"
+                    className="flex items-center justify-between py-2.5 text-sm tracking-wider uppercase font-medium text-stone-900 border-b border-stone-100 text-left"
                   >
                     <span>{link.label}</span>
                     <ArrowRight className="w-4 h-4 text-stone-400" />
