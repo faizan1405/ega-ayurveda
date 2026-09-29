@@ -41,11 +41,10 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ease-in-out ${
-          isScrolled
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ease-in-out ${isScrolled
             ? 'bg-ivory-50/94 backdrop-blur-md border-b border-stone-200/80 shadow-xs py-3.5'
             : 'bg-transparent py-5'
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
@@ -81,7 +80,7 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <div className="flex items-center gap-1.5">
                 <span className="font-display font-medium text-2xl sm:text-3xl tracking-[0.28em] text-stone-950 uppercase">
-                  EGA
+                  top
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-gold-500 mb-1" />
               </div>
